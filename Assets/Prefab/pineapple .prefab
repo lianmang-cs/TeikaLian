@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 47678796548858092}
   - component: {fileID: 3393745081326380785}
+  - component: {fileID: 42204082226273075}
+  - component: {fileID: 7678234503676550967}
   m_Layer: 0
   m_Name: 'pineapple '
   m_TagString: Untagged
@@ -91,3 +93,104 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!50 &42204082226273075
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2696869480213873315}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 8cf015599918d4d80961e5f87815831e, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &7678234503676550967
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2696869480213873315}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.18, y: 3.02}
+    newSize: {x: 2.18, y: 3.02}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.9913917, y: 0.3715486}
+      - {x: 0.58205587, y: 0.7691777}
+      - {x: 0.55431706, y: 0.92007333}
+      - {x: 0.69019365, y: 1.0364118}
+      - {x: 0.6838858, y: 1.3026894}
+      - {x: 0.5536542, y: 1.4086018}
+      - {x: 0.27897215, y: 1.3924673}
+      - {x: 0.077343576, y: 1.4758358}
+      - {x: -0.11958537, y: 1.5295055}
+      - {x: -0.30226123, y: 1.5197942}
+      - {x: -0.41227815, y: 1.4172921}
+      - {x: -0.61, y: 1.38}
+      - {x: -0.7004111, y: 1.2602053}
+      - {x: -0.68795514, y: 1.0175134}
+      - {x: -0.6087853, y: 0.91092163}
+      - {x: -0.58948106, y: 0.7535551}
+      - {x: -0.8194851, y: 0.57971543}
+      - {x: -0.9806545, y: 0.41486686}
+      - {x: -1.1000191, y: 0.08499345}
+      - {x: -1.09, y: -0.93055946}
+      - {x: -0.9385716, y: -1.25409}
+      - {x: -0.5334521, y: -1.5199069}
+      - {x: 0.53287804, y: -1.51}
+      - {x: 0.682966, y: -1.449867}
+      - {x: 0.94732755, y: -1.2143171}
+      - {x: 1.0997945, y: -0.9326725}
+      - {x: 1.09, y: 0.12287831}
+  m_UseDelaunayMesh: 1
