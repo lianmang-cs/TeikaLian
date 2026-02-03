@@ -6,9 +6,8 @@ public class PlayerBehaviour : MonoBehaviour
     //variable for speed of the player
     public float speed = 0.01f; 
     public float offY = -0.6f; 
-    public GameObject fruit; 
     private GameObject currentFruit; 
-
+    public GameObject[] fruits;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +15,8 @@ public class PlayerBehaviour : MonoBehaviour
     }
     // Update is called once per frame
     void Update() {
+        
+
         //Fruit position below player
         if (currentFruit != null) {
             //current player position
@@ -25,7 +26,8 @@ public class PlayerBehaviour : MonoBehaviour
             currentFruit.transform.position = playerPos + fruitOffset;
         }
         else {
-            currentFruit = Instantiate(fruit, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+            int choice = Random.Range(0, fruits.Length); 
+            currentFruit = Instantiate(fruits[choice], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
         }
         //Drop the fruit
         if (Keyboard.current.spaceKey.wasPressedThisFrame) {
