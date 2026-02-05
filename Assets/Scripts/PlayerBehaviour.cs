@@ -8,6 +8,8 @@ public class PlayerBehaviour : MonoBehaviour
     public float offY = -0.6f; 
     private GameObject currentFruit; 
     public GameObject[] fruits;
+    public float min; 
+    public float max; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,7 +17,6 @@ public class PlayerBehaviour : MonoBehaviour
     }
     // Update is called once per frame
     void Update() {
-        
 
         //Fruit position below player
         if (currentFruit != null) {
@@ -37,17 +38,31 @@ public class PlayerBehaviour : MonoBehaviour
             collider.enabled = true; 
             currentFruit = null; 
         }
+        float offset = 0.0f; 
         //Left move
         if (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed) {
-            Vector3 newPos = transform.position;
-            newPos.x = newPos.x - speed; 
-            transform.position = newPos; 
+            //Vector3 newPos = transform.position;
+            //newPos.x = newPos.x - speed; 
+            //transform.position = newPos; 
+            offset = -speed;
         }
         //Right move
         if (Keyboard.current.rightArrowKey.isPressed || Keyboard.current.dKey.isPressed) {
-            Vector3 newPos = transform.position;
-            newPos.x = newPos.x + speed; 
-            transform.position = newPos; 
-        }      
+            //Vector3 newPos = transform.position;
+            //newPos.x = newPos.x + speed; 
+            //transform.position = newPos; 
+            offset = speed; 
+        } 
+        Vector3 newPos = transform.position;
+        newPos.x = newPos.x + offset; 
+        //prevent movement to far right
+        if (newPos.x > max) {
+            newPos.x = max; 
+        }  
+        //prevent movement to far left
+        if (newPos.x < min) {
+            newPos.x = min; 
+        }
+        transform.position = newPos;    
     }
 }
