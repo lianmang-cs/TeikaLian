@@ -9,15 +9,17 @@ public class PlayerBehaviour : MonoBehaviour
     private GameObject currentFruit; 
     public GameObject[] fruits;
     public float min; 
-    public float max; 
+    public float max;  
+    public int move;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
+        move = 0; //0 means you can move both ways
+      
     }
     // Update is called once per frame
     void Update() {
-
         //Fruit position below player
         if (currentFruit != null) {
             //current player position
@@ -40,6 +42,10 @@ public class PlayerBehaviour : MonoBehaviour
         }
         float offset = 0.0f; 
         //Left move
+        //bool left = (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed) && move != 1;
+        //if (left == true) {
+            //offset = -speed;
+        //}
         if (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed) {
             //Vector3 newPos = transform.position;
             //newPos.x = newPos.x - speed; 
@@ -63,6 +69,27 @@ public class PlayerBehaviour : MonoBehaviour
         if (newPos.x < min) {
             newPos.x = min; 
         }
-        transform.position = newPos;    
+        transform.position = newPos; 
+
     }
+    //.        ***Collision Detection 2D***
+    //private void OnCollisionEnter2D(Collision2D other) {
+        //print("you touched" + other.GameObject.name);
+        //if(other.GameObject.CompareTag("LB")) {
+            //move = 1; //Cannot move left
+        //}
+    //}
+    //private void OnCollisionStay2D(Collision2D other) {
+        //print("you are touching " + other.GameObject.name);
+        //if(true) {
+
+        //}
+    //}
+    //private void OnCollisionExit2D(Collision2D other) {
+        //print("you stopped" + other.GameObject.name);
+        //if(other.GameObject.CompareTag("LB")) {
+            //mov = 0; //Cannot move left 
+        //}
+    //}
+    
 }
