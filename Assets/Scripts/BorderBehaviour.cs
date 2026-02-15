@@ -27,7 +27,7 @@ public class BorderBehaviour : MonoBehaviour
         if(other.gameObject.CompareTag("Fruit")) {
             float currentTime = Time.time;
             float timeThusFar = currentTime - timeStart; 
-
+            //Game Over 
             if(timeThusFar > timeout) {
                 gameOver.SetActive(true);
                 print("Game Over!");
