@@ -209,3 +209,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FruitBehaviour
   timeout: 1
   timeStart: 0
+  fruits: []
+  fruitType: 8

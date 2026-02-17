@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8363002255276348779, guid: 797e102bdc7744bbcb2c0b742ef7a462, type: 3}
+    - target: {fileID: 7079455484243558907, guid: fc2bea597dbac497989685a0cee1c74a, type: 3}
+      propertyPath: fruitType
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7678234503676550967, guid: fc2bea597dbac497989685a0cee1c74a, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2.78
