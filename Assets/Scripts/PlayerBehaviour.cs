@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro; 
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -11,11 +12,15 @@ public class PlayerBehaviour : MonoBehaviour
     public float min; 
     public float max;  
     public int move;
+    public int[] points; 
+    public int totalScore;
+    public TMP_Text textField; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
         move = 0; //0 means you can move both ways
+        totalScore = 0; 
       
     }
     // Update is called once per frame
@@ -71,6 +76,11 @@ public class PlayerBehaviour : MonoBehaviour
         }
         transform.position = newPos; 
 
+    }
+
+    public void updateScore(int index) {
+        totalScore = totalScore + points[index]; 
+        textField.SetText("Score: " + totalScore); 
     }
     //.        ***Collision Detection 2D***
     //private void OnCollisionEnter2D(Collision2D other) {

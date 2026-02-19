@@ -2138,7 +2138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88d21ca07f0240109b90e8338bde297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BorderBehaviour
-  timeout: 15
+  timeout: 5
   timeStart: 0
   gameOver: {fileID: 1752880698}
 --- !u!1660057539 &9223372036854775807
