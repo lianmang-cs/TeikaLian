@@ -30,7 +30,6 @@ public class BorderBehaviour : MonoBehaviour
             //Game Over 
             if(timeThusFar > timeout) {
                 gameOver.SetActive(true);
-                print("Game Over!");
             }
         }   
     }

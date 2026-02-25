@@ -15,13 +15,13 @@ public class PlayerBehaviour : MonoBehaviour
     public int[] points; 
     public int totalScore;
     public TMP_Text textField; 
+    public AudioSource playerAudio; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
         move = 0; //0 means you can move both ways
         totalScore = 0; 
-      
     }
     // Update is called once per frame
     void Update() {
@@ -34,11 +34,13 @@ public class PlayerBehaviour : MonoBehaviour
             currentFruit.transform.position = playerPos + fruitOffset;
         }
         else {
-            int choice = Random.Range(0, fruits.Length); 
+
+            int choice = GameObject.FindGameObjectWithTag("Queue").GetComponent<QueueManager>().updateQueue();
             currentFruit = Instantiate(fruits[choice], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
         }
         //Drop the fruit
         if (Keyboard.current.spaceKey.wasPressedThisFrame) {
+            playerAudio.Play(); 
             Rigidbody2D body = currentFruit.GetComponent<Rigidbody2D>(); 
             body.gravityScale = 1.0f; 
             Collider2D collider = currentFruit.GetComponent<Collider2D>(); 
@@ -75,7 +77,6 @@ public class PlayerBehaviour : MonoBehaviour
             newPos.x = min; 
         }
         transform.position = newPos; 
-
     }
 
     public void updateScore(int index) {
