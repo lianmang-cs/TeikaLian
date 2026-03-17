@@ -83,24 +83,4 @@ public class PlayerBehaviour : MonoBehaviour
         totalScore = totalScore + points[index]; 
         textField.SetText("Score: " + totalScore); 
     }
-    //.        ***Collision Detection 2D***
-    //private void OnCollisionEnter2D(Collision2D other) {
-        //print("you touched" + other.GameObject.name);
-        //if(other.GameObject.CompareTag("LB")) {
-            //move = 1; //Cannot move left
-        //}
-    //}
-    //private void OnCollisionStay2D(Collision2D other) {
-        //print("you are touching " + other.GameObject.name);
-        //if(true) {
-
-        //}
-    //}
-    //private void OnCollisionExit2D(Collision2D other) {
-        //print("you stopped" + other.GameObject.name);
-        //if(other.GameObject.CompareTag("LB")) {
-            //mov = 0; //Cannot move left 
-        //}
-    //}
-    
 }
