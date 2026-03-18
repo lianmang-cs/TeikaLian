@@ -9,16 +9,17 @@ public class QueueManager : MonoBehaviour
     void Start()
     {
         queue = new int[4];
+        childRenderers = new SpriteRenderer[4];
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            childRenderers[i] = transform.GetChild(i).GetComponent<SpriteRenderer>(); 
+        } 
         for(int i = 0; i < 4; i++)
         {
             //0 to 4 but not including 4
             queue[i] = Random.Range(0, 4); 
         }
-        childRenderers = new SpriteRenderer[4]; 
-        for(int i = 0; i < transform.childCount; i++)
-        {
-            childRenderers[i] = transform.GetChild(i).GetComponent<SpriteRenderer>(); 
-        }
+        
     }
 
     // Update is called once per frame

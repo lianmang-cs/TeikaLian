@@ -14,7 +14,7 @@ public class PlayerBehaviour : MonoBehaviour
     public int move;
     public int[] points; 
     public int totalScore;
-    public TMP_Text textField; 
+    public TMP_Text scoreText; 
     public AudioSource playerAudio; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -81,6 +81,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void updateScore(int index) {
         totalScore = totalScore + points[index]; 
-        textField.SetText("Score: " + totalScore); 
+        scoreText.SetText("Score: " + totalScore); 
     }
 }
