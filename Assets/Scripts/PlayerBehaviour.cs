@@ -49,21 +49,11 @@ public class PlayerBehaviour : MonoBehaviour
         }
         float offset = 0.0f; 
         //Left move
-        //bool left = (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed) && move != 1;
-        //if (left == true) {
-            //offset = -speed;
-        //}
         if (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed) {
-            //Vector3 newPos = transform.position;
-            //newPos.x = newPos.x - speed; 
-            //transform.position = newPos; 
             offset = -speed;
         }
         //Right move
         if (Keyboard.current.rightArrowKey.isPressed || Keyboard.current.dKey.isPressed) {
-            //Vector3 newPos = transform.position;
-            //newPos.x = newPos.x + speed; 
-            //transform.position = newPos; 
             offset = speed; 
         } 
         Vector3 newPos = transform.position;

@@ -33,14 +33,16 @@ public class FruitBehaviour : MonoBehaviour
                  transform.position.x < other.transform.position.x)) {
                     //Create the merged one
                     int choice = fruitType + 1;
+                    mergeSource.Play(); 
                     GameObject currentFruit = Instantiate(fruits[choice], 
                     Vector3.Lerp(transform.position, other.transform.position, 0.5f),
                     Quaternion.identity); 
                     currentFruit.GetComponent<Collider2D>().enabled = true; 
                     currentFruit.GetComponent<Rigidbody2D>().gravityScale = 1.0f; 
-                    mergeSource.Play(); 
-
-                    //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>().updateScore(fruitType);
+                    
+                    
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    player.GetComponent<PlayerBehaviour>().updateScore(fruitType);
 
 
                     
@@ -53,25 +55,4 @@ public class FruitBehaviour : MonoBehaviour
             }
         }
      }
-
-    //  private void OnTriggerEnter2D(Collider2D other) {
-    //      if(other.gameObject.CompareTag("Top")) {
-    //          timeStart = Time.time; 
-    //      }
-    //  }
-    //  private void OnTriggerStay2D(Collider2D other) {
-    //      if(other.gameObject.CompareTag("Top")) {
-    //          float currentTime = Time.time;
-    //         float timeThusFar = currentTime - timeStart; 
-
-    //          if(timeThusFar > timeout) {
-    //              print("Game Over!");
-    //          }
-    //      }   
-    //  }
-    //  private void OnTriggerExit2D(Collider2D other) {
-    //    if(other.gameObject.CompareTag("Top")) {
-    //         timeStart = 0.0f; 
-    //      }  
-    //  }
 }
