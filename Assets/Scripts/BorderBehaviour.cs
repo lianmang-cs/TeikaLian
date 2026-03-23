@@ -30,6 +30,9 @@ public class BorderBehaviour : MonoBehaviour
             //Game Over 
             if(timeThusFar > timeout) {
                 gameOver.SetActive(true);
+                //disable the player behaviour script
+                GameObject player = GameObject.FindGameObjectWithTag("Player"); 
+                player.GetComponent<PlayerBehaviour>().enabled = false; 
             }
         }   
     }
