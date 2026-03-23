@@ -33,6 +33,8 @@ public class BorderBehaviour : MonoBehaviour
                 //disable the player behaviour script
                 GameObject player = GameObject.FindGameObjectWithTag("Player"); 
                 player.GetComponent<PlayerBehaviour>().enabled = false; 
+                //play game over audio
+                gameOver.GetComponent<AudioSource>().Play(); 
             }
         }   
     }
