@@ -2651,7 +2651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8ad8d2a9b2b4b0e9876bd6dc4f101c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBehaviour
-  speed: 0.01
+  speed: 5
   offY: -0.6
   fruits:
   - {fileID: 2352782370916846287, guid: 6eabb78d7696f49c7984beee9bd332a0, type: 3}

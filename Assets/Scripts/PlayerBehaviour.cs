@@ -5,7 +5,7 @@ using TMPro;
 public class PlayerBehaviour : MonoBehaviour
 {
     //variable for speed of the player
-    public float speed = 0.01f; 
+    public float speed = 5f; 
     public float offY = -0.6f; 
     private GameObject currentFruit; 
     public GameObject[] fruits;
@@ -57,7 +57,7 @@ public class PlayerBehaviour : MonoBehaviour
             offset = speed; 
         } 
         Vector3 newPos = transform.position;
-        newPos.x = newPos.x + offset; 
+        newPos.x = newPos.x + offset * Time.deltaTime; 
         //prevent movement to far right
         if (newPos.x > max) {
             newPos.x = max; 
